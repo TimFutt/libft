@@ -6,7 +6,7 @@
 /*   By: tifuret <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/08 15:52:55 by tifuret           #+#    #+#             */
-/*   Updated: 2017/11/10 15:01:44 by tifuret          ###   ########.fr       */
+/*   Updated: 2017/11/15 13:10:03 by tifuret          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,25 +14,25 @@
 
 void	*ft_memmove(void *dest, const void *src, size_t n)
 {
-	size_t	count;
-	char	*temp1;
-	char	*temp2;
-	char	*temp3;
+	size_t	i;
+	char	*tmp;
+	char	*source;
+	char	*dst;
 
-	count = 0;
-	temp1 = (char*)malloc(sizeof(void) * n);
-	temp2 = (char*)src;
-	temp3 = (char*)dest;
-	while (count < n)
+	i = 0;
+	tmp = (char*)malloc(sizeof(void) * n);
+	source = src;
+	dst = dest;
+	while (i < n)
 	{
-		temp1[count] = temp2[count];
-		count++;
+		tmp[i] = source[i];
+		i++;
 	}
-	count = 0;
-	while (count < n)
+	i = 0;
+	while (i < n)
 	{
-		temp3[count] = temp1[count];
-		count++;
+		dst[i] = tmp[i];
+		i++;
 	}
-	return (temp2);
+	return (dst);
 }

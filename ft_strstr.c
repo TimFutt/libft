@@ -6,11 +6,11 @@
 /*   By: tifuret <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/10 11:53:32 by tifuret           #+#    #+#             */
-/*   Updated: 2017/11/10 13:17:51 by tifuret          ###   ########.fr       */
+/*   Updated: 2017/11/15 15:50:14 by tifuret          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-char	*ft_strstr(const char *str, const 	char *to_find)
+char	*ft_strstr(const char *str, const char *to_find)
 {
 	int		i;
 	int		j;
