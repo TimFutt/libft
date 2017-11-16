@@ -6,9 +6,11 @@
 /*   By: tifuret <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/13 17:06:48 by tifuret           #+#    #+#             */
-/*   Updated: 2017/11/13 17:07:15 by tifuret          ###   ########.fr       */
+/*   Updated: 2017/11/16 14:40:47 by tifuret          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "libft.h"
 
 void	ft_putstr_fd(char const *str, int fd)
 {

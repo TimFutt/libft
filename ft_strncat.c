@@ -6,9 +6,11 @@
 /*   By: tifuret <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/10 12:02:31 by tifuret           #+#    #+#             */
-/*   Updated: 2017/11/10 12:02:45 by tifuret          ###   ########.fr       */
+/*   Updated: 2017/11/16 16:28:27 by tifuret          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "libft.h"
 
 char	*ft_strncat(char *dest, char *src, int nb)
 {

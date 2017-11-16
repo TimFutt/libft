@@ -6,7 +6,7 @@
 /*   By: tifuret <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/10 12:05:42 by tifuret           #+#    #+#             */
-/*   Updated: 2017/11/15 15:40:59 by tifuret          ###   ########.fr       */
+/*   Updated: 2017/11/16 13:11:53 by tifuret          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,6 @@ char	*ft_strdup(char *src)
 
 	i = 0;
 	dest = (char *)malloc(sizeof(char) * ft_strlen(src));
-	//dest[0] = 'c';
 	while (i < ft_strlen(src))
 	{
 		dest[i] = src[i];

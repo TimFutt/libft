@@ -6,13 +6,15 @@
 /*   By: tifuret <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/10 13:11:09 by tifuret           #+#    #+#             */
-/*   Updated: 2017/11/15 15:51:05 by tifuret          ###   ########.fr       */
+/*   Updated: 2017/11/16 16:29:00 by tifuret          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "libft.h"
+
 char	*ft_strnstr(const char *haystack, const char *needle, size_t len)
 {
-	int		i;
+	size_t	i;
 	int		j;
 	int		scan;
 

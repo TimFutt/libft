@@ -6,7 +6,7 @@
 #    By: tifuret <marvin@42.fr>                     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2017/11/07 16:27:32 by tifuret           #+#    #+#              #
-#    Updated: 2017/11/15 15:38:31 by tifuret          ###   ########.fr        #
+#    Updated: 2017/11/16 16:32:22 by tifuret          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -109,7 +109,7 @@ OBJ = ft_memset.o \
 	  ft_strmap.o \
 	  ft_strmapi.o \
 	  ft_strequ.o \
-	  ft_strnqu.o \
+	  ft_strnequ.o \
 	  ft_strsub.o \
 	  ft_strjoin.o \
 	  ft_strtrim.o \
@@ -135,13 +135,14 @@ HEADER = libft.h
 all: $(NAME)
 
 $(NAME):
-		gcc -c $(SRC) -I $(HEADER)
-		ar rc libft.a $(OBJ)
+		gcc -c -Wall -Wextra -Werror $(SRC)
+		ar rc $(NAME) $(OBJ)
+		ranlib $(NAME)
 
 clean:
-		/bin/rm -f *.o
+		rm -f *.o
 
 fclean: clean
-		/bin/rm -f $(NAME)
+		rm -f $(NAME)
 
 re: fclean all

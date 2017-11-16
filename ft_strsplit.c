@@ -6,11 +6,11 @@
 /*   By: tifuret <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/13 16:59:05 by tifuret           #+#    #+#             */
-/*   Updated: 2017/11/15 12:46:41 by tifuret          ###   ########.fr       */
+/*   Updated: 2017/11/16 14:41:39 by tifuret          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libf.h"
+#include "libft.h"
 
 char	**ft_strsplit(char const *s, char c)
 {
@@ -40,4 +40,3 @@ char	**ft_strsplit(char const *s, char c)
 	}
 	return (str);
 }
-

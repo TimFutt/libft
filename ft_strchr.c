@@ -6,13 +6,13 @@
 /*   By: tifuret <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/10 13:48:55 by tifuret           #+#    #+#             */
-/*   Updated: 2017/11/15 15:47:16 by tifuret          ###   ########.fr       */
+/*   Updated: 2017/11/16 17:07:34 by tifuret          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char    *ft_strchr(const char *s, int c)
+char	*ft_strchr(const char *s, int c)
 {
 	int		i;
 

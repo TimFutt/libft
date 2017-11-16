@@ -6,26 +6,29 @@
 /*   By: tifuret <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/10 11:49:57 by tifuret           #+#    #+#             */
-/*   Updated: 2017/11/15 15:59:49 by tifuret          ###   ########.fr       */
+/*   Updated: 2017/11/16 16:05:25 by tifuret          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "libft.h"
+
 int		ft_compt(char *str, int i)
 {
-	int a;
+	int		a;
 
 	a = 1;
 	while (str[i] < 58 && str[i] > 47 && str[i + 1] < 58 && str[i + 1] > 47)
 	{
 		i++;
 		a = a * 10;
-	}	return (a);
+	}
+	return (a);
 }
 
 int		symbols(char *str)
 {
-	int	i;
-	
+	int		i;
+
 	i = 0;
 	while (str[i] == ' ' || str[i] == '\n' || str[i] == '\t' || str[i] == '\b')
 		i++;
@@ -36,7 +39,7 @@ int		symbols(char *str)
 
 int		is_neg(char *str)
 {
-	int	i;
+	int		i;
 
 	i = symbols(str);
 	if (str[i - 1] == '-')

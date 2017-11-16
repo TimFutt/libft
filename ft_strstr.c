@@ -6,7 +6,7 @@
 /*   By: tifuret <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/10 11:53:32 by tifuret           #+#    #+#             */
-/*   Updated: 2017/11/15 15:50:14 by tifuret          ###   ########.fr       */
+/*   Updated: 2017/11/16 14:48:15 by tifuret          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,13 +22,13 @@ char	*ft_strstr(const char *str, const char *to_find)
 	while (to_find[i])
 		i++;
 	if (i == 0)
-		return (str);
+		return ((char *)str);
 	while (str[k])
 	{
 		while (to_find[j] == str[k + j])
 		{
 			if (j == i - 1)
-				return (str + k);
+				return ((char *)(str + k));
 			j++;
 		}
 		j = 0;

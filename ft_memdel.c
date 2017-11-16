@@ -6,17 +6,17 @@
 /*   By: tifuret <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/13 15:50:09 by tifuret           #+#    #+#             */
-/*   Updated: 2017/11/13 16:01:07 by tifuret          ###   ########.fr       */
+/*   Updated: 2017/11/16 13:22:37 by tifuret          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_memdel(oid **ap)
+void	ft_memdel(void **ap)
 {
-	if(ap)
-	(
+	if (ap)
+	{
 		free(*ap);
 		*ap = NULL;
-	)
+	}
 }

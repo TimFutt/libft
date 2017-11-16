@@ -6,11 +6,11 @@
 /*   By: tifuret <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/13 16:13:52 by tifuret           #+#    #+#             */
-/*   Updated: 2017/11/13 16:19:43 by tifuret          ###   ########.fr       */
+/*   Updated: 2017/11/16 14:43:08 by tifuret          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "lift.h"
+#include "libft.h"
 
 void	ft_striteri(char *s, void (*f)(unsigned int, char *))
 {

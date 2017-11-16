@@ -6,15 +6,15 @@
 /*   By: tifuret <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/10 13:00:55 by tifuret           #+#    #+#             */
-/*   Updated: 2017/11/15 15:42:18 by tifuret          ###   ########.fr       */
+/*   Updated: 2017/11/16 13:06:41 by tifuret          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char    *ft_strncpy(char *dest, const char *source, size_t n)
+char	*ft_strncpy(char *dest, const char *source, size_t n)
 {
-	size_t    i;
+	size_t		i;
 
 	i = 0;
 	while (source[i] != '\0' && i < n)

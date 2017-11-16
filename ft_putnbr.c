@@ -6,13 +6,13 @@
 /*   By: tifuret <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/15 12:47:24 by tifuret           #+#    #+#             */
-/*   Updated: 2017/11/15 12:47:40 by tifuret          ###   ########.fr       */
+/*   Updated: 2017/11/16 13:09:42 by tifuret          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void    ft_putnbr(int n)
+void	ft_putnbr(int n)
 {
 	ft_putnbr_fd(n, 1);
 }
