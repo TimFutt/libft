@@ -1,41 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strsplit.c                                      :+:      :+:    :+:   */
+/*   ft_wordcount.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: tifuret <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/11/13 16:59:05 by tifuret           #+#    #+#             */
-/*   Updated: 2017/11/20 16:55:11 by tifuret          ###   ########.fr       */
+/*   Created: 2017/11/20 16:18:08 by tifuret           #+#    #+#             */
+/*   Updated: 2017/11/20 16:34:59 by tifuret          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	**ft_strsplit(char const *s, char c)
+int		ft_wordcount(const char *str, char delim)
 {
 	int		i;
 	int		j;
-	int		start;
-	char	**str;
 
-	if (!s)
-		return (NULL);
-	j = 0;
-	j = ft_wordcount(s, c);
-	if ((str = (char **)malloc(sizeof(*str) * j + 1)) == NULL)
-		return (NULL);
 	i = 0;
 	j = 0;
-	while (s[i])
+	while (str[i])
 	{
-		while (s[i] == c)
-			i++;
-		start = i;
-		while (s[i] != c && s[i])
-			i++;
-		(i > start) ? str[j++] = ft_strsub(s, start, i - start) : 0;
+		if (str[i - 1] != delim && (str[i] == delim || str[i]))
+			j++;
+		i++;
 	}
-	str[j] = NULL;
-	return (str);
+	return (j);
 }

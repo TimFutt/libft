@@ -6,7 +6,7 @@
 /*   By: tifuret <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/13 16:34:15 by tifuret           #+#    #+#             */
-/*   Updated: 2017/11/16 16:39:55 by tifuret          ###   ########.fr       */
+/*   Updated: 2017/11/20 16:08:18 by tifuret          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,20 +14,18 @@
 
 char	*ft_strtrim(char const *s)
 {
-	char			*str;
-	unsigned int	i;
+	unsigned int	start;
+	int				end;
 
-	str = (char*)malloc(sizeof(char) * ft_strlen(s) + 1);
-	if (str)
-	{
-		i = -1;
-		while (s[i])
-		{
-			if (s[i] != ' ' && s[i] != '\n' && s[i] != '\t')
-				str[i] = s[i];
-			i++;
-		}
-		str[i] = '\0';
-	}
-	return (str);
+	if (!s)
+		return (NULL);
+	start = 0;
+	end = (int)ft_strlen(s) - 1;
+	while ((s[start] == ' ' || s[start] == '\t' || s[start] == '\n') &&
+			s[start])
+		start++;
+	while ((s[end] == ' ' || s[end] == '\t' || s[end] == '\n') && s[end] &&
+			end > (int)start)
+		end--;
+	return (ft_strsub(s, start, (end - start + 1)));
 }

@@ -6,7 +6,7 @@
 #    By: tifuret <marvin@42.fr>                     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2017/11/07 16:27:32 by tifuret           #+#    #+#              #
-#    Updated: 2017/11/16 16:32:22 by tifuret          ###   ########.fr        #
+#    Updated: 2017/11/20 16:35:31 by tifuret          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -69,7 +69,8 @@ SRC = ft_memset.c \
 	  ft_lstdel.c \
 	  ft_lstadd.c \
 	  ft_lstiter.c \
-	  ft_lstmap.c
+	  ft_lstmap.c \
+	  ft_wordcount.c
 
 OBJ = ft_memset.o \
 	  ft_bzero.o \
@@ -128,7 +129,8 @@ OBJ = ft_memset.o \
 	  ft_lstdel.o \
 	  ft_lstadd.o \
 	  ft_lstiter.o \
-	  ft_lstmap.o
+	  ft_lstmap.o \
+	  ft_wordcount.o
 
 HEADER = libft.h
 
