@@ -6,7 +6,7 @@
 /*   By: tifuret <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/13 16:17:56 by tifuret           #+#    #+#             */
-/*   Updated: 2017/11/16 14:50:41 by tifuret          ###   ########.fr       */
+/*   Updated: 2017/11/22 16:04:42 by tifuret          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,8 +18,10 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 	unsigned int	i;
 
 	i = 0;
+	if (!s)
+		return (NULL);
 	map = ft_strdup((char *)s);
-	if (!map || !s || !f)
+	if (!map || !f)
 		return (NULL);
 	while (map[i])
 	{

@@ -6,39 +6,61 @@
 /*   By: tifuret <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/16 13:19:35 by tifuret           #+#    #+#             */
-/*   Updated: 2017/11/22 14:37:30 by tifuret          ###   ########.fr       */
+/*   Updated: 2017/11/22 15:46:08 by tifuret          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_itoa(int n)
+static long		ft_digitnb(int n)
 {
-	char	*number;
+	long	size;
 
-	number = (char *)ft_memalloc(10);
-	if (number == NULL)
+	if (n == 0)
+		return (1);
+	size = 0;
+	if (n < 0)
+	{
+		size++;
+		n = -n;
+	}
+	while (n != 0)
+	{
+		n /= 10;
+		size++;
+	}
+	return (size++);
+}
+
+static int		ft_sign(int n)
+{
+	if (n < 0)
+		return (1);
+	return (0);
+}
+
+char			*ft_itoa(int n)
+{
+	long	n_long;
+	long	len;
+	char	*nbr;
+
+	n_long = n;
+	len = ft_digitnb(n_long);
+	nbr = (char *)malloc((len + 1) * sizeof(char));
+	if (!nbr)
 		return (NULL);
-	if (n >= 0 && number)
+	nbr[len] = '\0';
+	len--;
+	if (n_long < 0)
+		n_long = -n_long;
+	while (len >= 0)
 	{
-		*--number = '0' + (n % 10);
-		n /= 10;
-		while (n != 0)
-		{
-			*--number = '0' + (n % 10);
-			n /= 10;
-		}
+		nbr[len] = (n_long % 10) + '0';
+		len--;
+		n_long /= 10;
 	}
-	else if (number)
-	{
-		*--number = '0' - (n % 10);
-		n /= 10;
-		while (n != 0)
-		{
-			*--number = '0' - (n % 10);
-			n /= 10;
-		}
-		*--number = '-';
-	}
-	return (ft_strdup(number));
+	if (ft_sign(n))
+		nbr[0] = '-';
+	return (nbr);
 }

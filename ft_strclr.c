@@ -6,7 +6,7 @@
 /*   By: tifuret <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/13 15:59:45 by tifuret           #+#    #+#             */
-/*   Updated: 2017/11/13 16:01:33 by tifuret          ###   ########.fr       */
+/*   Updated: 2017/11/22 16:18:51 by tifuret          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,12 +14,14 @@
 
 void	ft_strclr(char *s)
 {
-	int		i;
+	int		len;
 
-	i = 0;
-	while (s[i])
+	if (!s)
+		return ;
+	len = ft_strlen(s);
+	while (len >= 0)
 	{
-		s[i] = '\0';
-		i++;
+		s[len] = '\0';
+		len--;
 	}
 }

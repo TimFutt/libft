@@ -6,7 +6,7 @@
 /*   By: tifuret <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/13 16:29:23 by tifuret           #+#    #+#             */
-/*   Updated: 2017/11/16 16:41:42 by tifuret          ###   ########.fr       */
+/*   Updated: 2017/11/22 16:18:18 by tifuret          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,14 +14,17 @@
 
 char	*ft_strjoin(char const *s1, char const *s2)
 {
-	char	*strjoin;
+	char	*s3;
 
+	if (!s1 && !s2)
+		return (NULL);
 	if (!s1)
+		return (ft_strdup(s2));
+	if (!s2)
+		return (ft_strdup(s1));
+	if (!(s3 = ft_strnew(ft_strlen(s1) + ft_strlen(s2))))
 		return (NULL);
-	strjoin = ft_strnew(ft_strlen(s1) + ft_strlen(s2));
-	if (!strjoin)
-		return (NULL);
-	ft_strcpy(strjoin, s1);
-	ft_strcat(strjoin, (char *)s2);
-	return (strjoin);
+	ft_strcpy(s3, s1);
+	ft_strcat(s3, (char *)s2);
+	return (s3);
 }
