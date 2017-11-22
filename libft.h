@@ -6,7 +6,7 @@
 /*   By: tifuret <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/07 16:01:40 by tifuret           #+#    #+#             */
-/*   Updated: 2017/11/20 16:21:59 by tifuret          ###   ########.fr       */
+/*   Updated: 2017/11/22 14:09:21 by tifuret          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,7 +33,7 @@ void				*ft_memmove(void *dest, const void *src, size_t n);
 void				*ft_memchr(const void *s, int c, size_t n);
 int					ft_memcmp(const void *s1, const void *s2, size_t n);
 int					ft_strlen(const char *s);
-char				*ft_strdup(char *src);
+char				*ft_strdup(const char *s);
 char				*ft_strcpy(char *dst, const char *src);
 char				*ft_strncpy(char *dest, const char *source, size_t n);
 char				*ft_strcat(char *dest, char *src);
@@ -78,12 +78,10 @@ void				ft_putchar_fd(char c, int fd);
 void				ft_putstr_fd(char const *s, int fd);
 void				ft_putendl_fd(char const *s, int fd);
 void				ft_putnbr_fd(int n, int fd);
-t_list				*ft_lstnew(void const *content, size_t content_size);
 void				ft_lstdelone(t_list **alst, void (*del)(void *, size_t));
 void				ft_lstdel(t_list **alst, void (*del)(void *, size_t));
 void				ft_lstadd(t_list **alst, t_list *new);
 void				ft_lstiter(t_list *lst, void (*f)(t_list *elem));
-t_list				*ft_lstmap(t_list *lst, t_list *(*f)(t_list *elem));
 int					ft_wordcount(const char *str, char delim);
 
 #endif

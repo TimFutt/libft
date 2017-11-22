@@ -6,33 +6,32 @@
 /*   By: tifuret <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/08 15:52:55 by tifuret           #+#    #+#             */
-/*   Updated: 2017/11/16 14:45:48 by tifuret          ###   ########.fr       */
+/*   Updated: 2017/11/22 12:46:59 by tifuret          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_memmove(void *dest, const void *src, size_t n)
+void	*ft_memmove(void *dst, const void *src, size_t len)
 {
-	size_t	i;
-	char	*tmp;
-	char	*source;
-	char	*dst;
+	size_t			i;
+	unsigned char	*dest;
+	unsigned char	*source;
 
 	i = 0;
-	tmp = (char*)malloc(sizeof(void) * n);
-	source = (char *)src;
-	dst = dest;
-	while (i < n)
-	{
-		tmp[i] = source[i];
-		i++;
-	}
-	i = 0;
-	while (i < n)
-	{
-		dst[i] = tmp[i];
-		i++;
-	}
+	dest = (unsigned char *)dst;
+	source = (unsigned char *)src;
+	if (dest > source)
+		while (i < len)
+		{
+			dest[len - 1] = source[len - 1];
+			len--;
+		}
+	else
+		while (i < len)
+		{
+			dest[i] = source[i];
+			i++;
+		}
 	return (dst);
 }

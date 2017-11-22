@@ -6,7 +6,7 @@
 /*   By: tifuret <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/16 13:19:35 by tifuret           #+#    #+#             */
-/*   Updated: 2017/11/20 17:12:22 by tifuret          ###   ########.fr       */
+/*   Updated: 2017/11/22 14:37:30 by tifuret          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,8 @@ char	*ft_itoa(int n)
 	char	*number;
 
 	number = (char *)ft_memalloc(10);
+	if (number == NULL)
+		return (NULL);
 	if (n >= 0 && number)
 	{
 		*--number = '0' + (n % 10);

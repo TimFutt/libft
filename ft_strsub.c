@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: tifuret <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/11/13 16:20:39 by tifuret           #+#    #+#             */
-/*   Updated: 2017/11/16 16:34:16 by tifuret          ###   ########.fr       */
+/*   Created: 2017/11/22 13:59:33 by tifuret           #+#    #+#             */
+/*   Updated: 2017/11/22 13:59:36 by tifuret          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,19 +14,18 @@
 
 char	*ft_strsub(char const *s, unsigned int start, size_t len)
 {
-	char	*str;
-	int		i;
+	char			*sub;
+	unsigned int	i;
 
-	if (!s)
-		return (NULL);
-	str = malloc((len + 1) * sizeof(char));
 	i = 0;
-	str[len] = '\0';
-	while (len--)
+	if (!s || !(sub = (char *)ft_memalloc(len + 1)))
+		return (NULL);
+	while (i < len)
 	{
-		str[i] = s[start];
+		sub[i] = s[start];
 		i++;
 		start++;
 	}
-	return (str);
+	sub[i] = '\0';
+	return (sub);
 }

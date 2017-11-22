@@ -6,7 +6,7 @@
 /*   By: tifuret <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/10 11:49:57 by tifuret           #+#    #+#             */
-/*   Updated: 2017/11/20 14:28:48 by tifuret          ###   ########.fr       */
+/*   Updated: 2017/11/22 14:18:10 by tifuret          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,12 +14,10 @@
 
 int		ft_atoi(const char *str)
 {
-	long	sign;
-	long	nbr;
-	int		i;
+	int		sign;
+	int		nbr;
 
 	sign = 1;
-	i = 0;
 	while (*str == ' ' || *str == '\f' || *str == '\n' || *str == '\r' ||
 			*str == '\t' || *str == '\v')
 		str++;
